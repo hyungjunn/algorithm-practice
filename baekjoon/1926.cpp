@@ -1,15 +1,14 @@
 #include <iostream>
 #include <queue>
 using namespace std;
-constexpr int MAX = 505;
-#define X first
-#define Y second
-int dx[] = {1, 0, -1, 0};
-int dy[] = {0, -1, 0, 1};
 int n, m;
+constexpr int MAX = 505;
 int board[MAX][MAX];
 bool visited[MAX][MAX];
-
+#define X first
+#define Y second
+int dx[4] = {1, 0, -1, 0};
+int dy[4] = {0, 1, 0, -1};
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
@@ -21,22 +20,22 @@ int main() {
   int max_area = 0;
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < m; j++) {
-      if (board[i][j] == 0 || visited[i][j]) continue;
-      queue<pair<int, int> > Q;
+      if (visited[i][j] || board[i][j] == 0) continue;
+      // 방문을 하지 않았고 1인경우
+      queue<pair<int, int>> Q;
       Q.emplace(i, j);
-      visited[i][j] = true;
       pic_count++;
+      visited[i][j] = true;
       int area = 1;
       while (!Q.empty()) {
-        auto value = Q.front();
-        Q.pop();
+        auto cur = Q.front(); Q.pop();
         for (int dir = 0; dir < 4; dir++) {
-          int x = value.X + dx[dir];
-          int y = value.Y + dy[dir];
-          if (x < 0 || y < 0 || x >= n || y >= n) continue;
-          if (board[x][y] == 0 || visited[x][y]) continue;
-          Q.emplace(x, y);
-          visited[x][y] = true;
+          int nx = cur.X + dx[dir];
+          int ny = cur.Y + dy[dir];
+          if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
+          if (visited[nx][ny] || board[nx][ny] == 0) continue;
+          Q.emplace(nx, ny);
+          visited[nx][ny] = true;
           area++;
         }
       }
@@ -44,5 +43,4 @@ int main() {
     }
   }
   cout << pic_count << '\n' << max_area;
-  return 0;
 }
