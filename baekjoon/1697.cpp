@@ -1,3 +1,5 @@
+// 백준 1697번: 숨바꼭질
+// https://www.acmicpc.net/problem/1697
 #include <iostream>
 #include <queue>
 #include <algorithm>

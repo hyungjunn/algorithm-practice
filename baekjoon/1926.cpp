@@ -1,3 +1,5 @@
+// 백준 1926번: 그림
+// https://www.acmicpc.net/problem/1926
 #include <iostream>
 #include <queue>
 using namespace std;

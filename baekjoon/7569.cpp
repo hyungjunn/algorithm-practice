@@ -1,3 +1,5 @@
+// 백준 7569번: 토마토
+// https://www.acmicpc.net/problem/7569
 #include <iostream>
 #include <queue>
 #include <algorithm>

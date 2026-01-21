@@ -1,3 +1,5 @@
+// 백준 7795번: 먹을 것인가 먹힐 것인가
+// https://www.acmicpc.net/problem/7795
 #include <iostream>
 #include <vector>
 #include <algorithm>

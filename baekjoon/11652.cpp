@@ -1,3 +1,5 @@
+// 백준 11652번: 카드
+// https://www.acmicpc.net/problem/11652
 #include <iostream>
 #include <vector>
 #include <algorithm>

@@ -1,3 +1,5 @@
+// 백준 10026번: 적록색약
+// https://www.acmicpc.net/problem/10026
 #include <iostream>
 #include <queue>
 #include <algorithm>
