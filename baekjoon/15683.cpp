@@ -1,8 +1,6 @@
 // 백준 15683번: 감시
 // https://www.acmicpc.net/problem/15683
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 #define X first
 #define Y second

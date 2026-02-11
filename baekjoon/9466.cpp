@@ -1,6 +1,6 @@
 // 백준 9466번: 텀 프로젝트
 // https://www.acmicpc.net/problem/9466
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 int T, n;
 constexpr int MAX = 100005;

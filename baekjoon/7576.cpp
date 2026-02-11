@@ -1,8 +1,6 @@
 // 백준 7576번: 토마토
 // https://www.acmicpc.net/problem/7576
-#include <iostream>
-#include <queue>
-#include <algorithm>
+#include <bits/stdc++.h>
 int n, m;
 int board[1002][1002];
 int dist[1002][1002];

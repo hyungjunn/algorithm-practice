@@ -1,8 +1,6 @@
 // 백준 2504번: 괄호의 값
 // https://www.acmicpc.net/problem/2504
-#include <string>
-#include <iostream>
-#include <stack>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {

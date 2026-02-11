@@ -1,8 +1,6 @@
 // 백준 1926번: 그림
 // https://www.acmicpc.net/problem/1926
-#include <iostream>
-#include <queue>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 int n, m; // 1 <= n, m <= 500
 int board[502][502];

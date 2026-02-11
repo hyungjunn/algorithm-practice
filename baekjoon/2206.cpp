@@ -1,7 +1,6 @@
 // 백준 2206번: 벽 부수고 이동하기
 // https://www.acmicpc.net/problem/2206
-#include <iostream>
-#include <queue>
+#include <bits/stdc++.h>
 using namespace std;
 int dx[4] = {1, 0, -1, 0};
 int dy[4] = {0, 1, 0, -1};

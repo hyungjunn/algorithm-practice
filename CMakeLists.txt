@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
+
+set(CMAKE_C_COMPILER "/opt/homebrew/Cellar/llvm/21.1.8/bin/clang")
+set(CMAKE_CXX_COMPILER "/opt/homebrew/Cellar/llvm/21.1.8/bin/clang++")
+
 project(algorithm_practice LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)

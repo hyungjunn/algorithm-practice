@@ -1,7 +1,6 @@
 // 백준 2178번: 미로 탐색
 // https://www.acmicpc.net/problem/2178
-#include <iostream>
-#include <queue>
+#include <bits/stdc++.h>
 using namespace std;
 int n, m; // 2 <= n, m <= 100
 char board[102][102];
