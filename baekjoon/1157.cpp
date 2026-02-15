@@ -1,38 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
   string s;
   cin >> s;
-  map<char, int> mp;
-  for (char c : s) {
-    if ('A' <= c && c <= 'Z') {
-      c += 32;
-    }
-    if (mp.find(c) != mp.end()) {
-      mp[c] += 1;
-    } else {
-      mp.insert({c, 1});
+  int cnt[26] = {};
+  for (unsigned char ch : s) {
+    ch = toupper(ch);
+    cnt[ch - 'A']++;
+  }
+  int best = -1, idx = -1;
+  bool tie = false;
+  for (int i = 0; i < 26; i++) {
+    if (cnt[i] > best) {
+      best = cnt[i];
+      idx = i;
+      tie = false;
+    } else if (cnt[i] == best) {
+      tie = true;
     }
   }
-  int maxValue = -1;
-  char maxKey = '?';
-  bool is_question = false;
-  for (auto &p : mp) {
-    if (p.second > maxValue) {
-      maxValue = p.second;
-      maxKey = p.first;
-      is_question = false;
-    }
-    else if (p.second == maxValue) {
-      is_question = true;
-    }
-  }
-  if (is_question) {
-    cout << '?';
-  } else {
-    cout << char(maxKey - 32);
-  }
-
+  cout << (tie ? '?' : static_cast<char>('A' + idx));
 }
