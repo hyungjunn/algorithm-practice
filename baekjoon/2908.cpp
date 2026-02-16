@@ -1,27 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+int reverseNum(int num) {
+  int reverseNum = 0;
+  while (num > 0) {
+    reverseNum = (reverseNum * 10) + (num % 10);
+    num /= 10;
+  }
+  return reverseNum;
+}
+
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
   int A, B;
   cin >> A >> B;
-  int C = 0, D = 0;
-  int C_length = 10 * 10;
-  for (int i = 0; i < 3; i++) {
-    C += (A % 10) * C_length;
-    A /= 10;
-    C_length /= 10;
-  }
-  int D_length = 10 * 10;
-  for (int i = 0; i < 3; i++) {
-    D += (B % 10) * D_length;
-    B /= 10;
-    D_length /= 10;
-  }
-  if (C >= D) {
-    cout << C;
-  } else {
-    cout << D;
-  }
+  cout << max(reverseNum(A), reverseNum(B));
   return 0;
 }
