@@ -1,18 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-int no[1002];
+int num[1000];
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
   int N;
   cin >> N;
-  while (N--) {
-    int num;
-    cin >> num;
-    no[num]++;
+  for (int i = 0; i < N; i++) {
+    cin >> num[i];
   }
-  for (int i = 1; i <= 1000; i++) {
-    if (no[i] == 0) continue;
-    cout << i << '\n';
-  }
+  sort(num, num + N);
+  for (int i = 0; i < N; i++) cout << num[i] << '\n';
 }
