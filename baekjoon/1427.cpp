@@ -1,17 +1,16 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+#include <string>
+#include <algorithm>
+
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
-  int num;
-  cin >> num;
-  vector<int> v;
-  while (num > 0) {
-    v.push_back(num % 10);
-    num /= 10;
-  }
-  sort(v.begin(), v.end());
-  for (int i = v.size() - 1; i >= 0 ; i--) {
-    cout << v[i];
-  }
+  std::ios::sync_with_stdio(false);
+  std::cin.tie(nullptr);
+
+  std::string num_str;
+  std::cin >> num_str;
+
+  std::sort(num_str.rbegin(), num_str.rend());
+
+  std::cout << num_str << '\n';
+  return 0;
 }
